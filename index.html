@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><!-- TODO: あなたの名前 --> | AWSクラウドエンジニア ポートフォリオ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <header class="site-header">
+    <nav class="nav container">
+      <span class="nav-logo"><!-- TODO: あなたの名前 --></span>
+      <ul class="nav-links">
+        <li><a href="#about">このサイトについて</a></li>
+        <li><a href="#projects">プロジェクト</a></li>
+        <li><a href="#skills">スキル</a></li>
+        <li><a href="#profile">プロフィール</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ヒーローセクション -->
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <p class="hero-eyebrow">AWS Cloud Engineer Portfolio</p>
+        <h1 class="hero-name"><!-- TODO: あなたの名前（例：山田 太郎）--></h1>
+        <p class="hero-tagline"><!-- TODO: キャッチコピー（例：クラウドで課題を解決するエンジニアを目指して）--></p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">プロジェクトを見る</a>
+          <a href="#profile" class="btn btn-outline">プロフィール</a>
+        </div>
+      </div>
+      <div class="hero-decoration" aria-hidden="true"></div>
+    </section>
+
+    <!-- このサイトについて -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">このサイトについて</h2>
+        <div class="about-body">
+          <!-- TODO: サイトの説明（例：AWSを中心としたクラウド技術の学習・実践を記録するポートフォリオです。個人プロジェクトを通じて習得したインフラ構築・IaC・CI/CDのスキルを紹介しています。）-->
+          <p><!-- TODO: サイト説明文を記入 --></p>
+          <p><!-- TODO: 補足文（任意）を記入 --></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- プロジェクト一覧 -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <h2 class="section-title">プロジェクト一覧</h2>
+        <p class="section-subtitle">個人プロジェクトを通じて学んだAWSアーキテクチャの実例です。</p>
+
+        <div class="projects-grid">
+
+          <!-- プロジェクト 1: Minecraft サーバー -->
+          <!-- data-images: カンマ区切りで複数画像パスを指定（スライドショーに表示） -->
+          <article class="project-card"
+            data-title="Minecraftサーバー（AWS Spot Instance）"
+            data-tech="AWS EC2, S3, Terraform"
+            data-github=""
+            data-description="<!-- TODO: プロジェクト説明（例：AWS EC2スポットインスタンスを活用してコストを最小化しながら稼働するMinecraftサーバー。Terraformでインフラをコード化し、S3でワールドデータを永続化する構成。） -->"
+            data-images="assets/minecraft-1.png,assets/minecraft-2.png">
+            <div class="card-thumbnail">
+              <img src="assets/minecraft-1.png" alt="Minecraftサーバー" onerror="this.parentElement.classList.add('no-image')" />
+              <div class="card-placeholder-icon">&#9729;</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Minecraftサーバー</h3>
+              <p class="card-subtitle">AWS Spot Instance</p>
+              <ul class="card-tags">
+                <li>AWS EC2</li>
+                <li>S3</li>
+                <li>Terraform</li>
+              </ul>
+            </div>
+            <button class="card-detail-btn" aria-label="Minecraftサーバーの詳細を見る">詳細を見る</button>
+          </article>
+
+          <!-- プロジェクト 2: 高可用性Webインフラ -->
+          <article class="project-card"
+            data-title="高可用性Webインフラ構成"
+            data-tech="AWS VPC, ALB, RDS, Auto Scaling, WAF, CloudWatch, Terraform"
+            data-github="<!-- TODO: GitHubリポジトリURL -->"
+            data-description="<!-- TODO: プロジェクト説明（例：マルチAZ構成のVPCにALBとAuto ScalingグループでWebサーバーを冗長化し、RDS Multi-AZでDBの可用性を確保。WAFで不正アクセスを防御し、CloudWatchでリソース監視を実装した高可用性インフラ。） -->"
+            data-images="assets/高可用性EC2.drawio.png,assets/ha-infra-2.png,assets/ha-infra-3.png">
+            <div class="card-thumbnail">
+              <img src="assets/高可用性EC2.drawio.png" alt="高可用性Webインフラ構成" onerror="this.parentElement.classList.add('no-image')" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">高可用性Webインフラ構成</h3>
+              <p class="card-subtitle">マルチAZ・冗長化アーキテクチャ</p>
+              <ul class="card-tags">
+                <li>AWS VPC</li>
+                <li>ALB</li>
+                <li>RDS</li>
+                <li>Auto Scaling</li>
+                <li>WAF</li>
+                <li>Terraform</li>
+              </ul>
+            </div>
+            <button class="card-detail-btn" aria-label="高可用性Webインフラ構成の詳細を見る">詳細を見る</button>
+          </article>
+
+          <!-- プロジェクト 3: ECS 画像テキスト抽出パイプライン -->
+          <article class="project-card"
+            data-title="ECSを用いた画像テキスト抽出パイプライン"
+            data-tech="AWS ECS Fargate, SNS, SQS, Rekognition, DynamoDB, Terraform"
+            data-github=""
+            data-description="<!-- TODO: プロジェクト説明（例：S3にアップロードされた画像をトリガーにSNS/SQSを介してECS Fargateコンテナを起動し、Rekognitionでテキスト抽出を行いDynamoDBに結果を保存するサーバーレスパイプライン。） -->"
+            data-images="assets/ecs-pipeline-1.png,assets/ecs-pipeline-2.png">
+            <div class="card-thumbnail">
+              <img src="assets/ecs-pipeline-1.png" alt="ECS画像テキスト抽出パイプライン" onerror="this.parentElement.classList.add('no-image')" />
+              <div class="card-placeholder-icon">&#128247;</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">画像テキスト抽出パイプライン</h3>
+              <p class="card-subtitle">ECS Fargate + Rekognition</p>
+              <ul class="card-tags">
+                <li>ECS Fargate</li>
+                <li>SNS</li>
+                <li>SQS</li>
+                <li>Rekognition</li>
+                <li>DynamoDB</li>
+              </ul>
+            </div>
+            <button class="card-detail-btn" aria-label="ECS画像テキスト抽出パイプラインの詳細を見る">詳細を見る</button>
+          </article>
+
+          <!-- プロジェクト 4: このポートフォリオサイト -->
+          <article class="project-card"
+            data-title="このポートフォリオサイト"
+            data-tech="AWS S3, CloudFront, Route 53, ACM, CodePipeline, CodeBuild, Terraform"
+            data-github="<!-- TODO: GitHubリポジトリURL -->"
+            data-description="<!-- TODO: プロジェクト説明（例：S3静的ホスティング＋CloudFrontで配信するポートフォリオサイト。Route 53でカスタムドメインを設定し、ACMでHTTPS化。CodePipeline＋CodeBuildでGitHubプッシュから自動デプロイするCI/CDパイプラインをTerraformで構築。） -->"
+            data-images="assets/portfolio-1.png,assets/portfolio-2.png">
+            <div class="card-thumbnail">
+              <img src="assets/portfolio-1.png" alt="ポートフォリオサイト" onerror="this.parentElement.classList.add('no-image')" />
+              <div class="card-placeholder-icon">&#127760;</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">このポートフォリオサイト</h3>
+              <p class="card-subtitle">S3 + CloudFront + CI/CD</p>
+              <ul class="card-tags">
+                <li>S3</li>
+                <li>CloudFront</li>
+                <li>Route 53</li>
+                <li>CodePipeline</li>
+                <li>Terraform</li>
+              </ul>
+            </div>
+            <button class="card-detail-btn" aria-label="ポートフォリオサイトの詳細を見る">詳細を見る</button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- スキルセット -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <h2 class="section-title">スキルセット</h2>
+
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3 class="skill-category-title">AWS</h3>
+            <ul class="skill-list">
+              <li>EC2</li>
+              <li>S3</li>
+              <li>CloudFront</li>
+              <li>RDS</li>
+              <li>Lambda</li>
+              <li>ECS</li>
+              <li>SNS</li>
+              <li>SQS</li>
+              <li>DynamoDB</li>
+              <li>Route 53</li>
+              <li>WAF</li>
+              <li>CloudWatch</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">IaC・DevOps</h3>
+            <ul class="skill-list">
+              <li>Terraform</li>
+              <li>GitHub</li>
+              <li>CodePipeline</li>
+              <li>CodeBuild</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">言語・ツール</h3>
+            <ul class="skill-list">
+              <li>Python</li>
+              <li>Splunk</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- プロフィール -->
+    <section class="profile" id="profile">
+      <div class="container">
+        <h2 class="section-title">プロフィール</h2>
+
+        <div class="profile-inner">
+          <div class="profile-avatar" aria-hidden="true">
+            <!-- TODO: プロフィール画像を assets/avatar.png として追加するか、イニシャルを記入 -->
+            <span class="profile-initials"><!-- TODO: イニシャル（例：YT）--></span>
+          </div>
+
+          <div class="profile-content">
+            <h3 class="profile-name"><!-- TODO: あなたの名前（例：山田 太郎）--></h3>
+            <p class="profile-label">AWSクラウドエンジニア志望</p>
+
+            <div class="profile-bio">
+              <!-- TODO: 自己紹介文（例：現在、AWSクラウドエンジニアを目指して学習中です。Terraformを用いたインフラのコード化や、可用性・セキュリティを考慮したAWSアーキテクチャ設計を中心に個人プロジェクトで実践を積んでいます。）-->
+              <p><!-- TODO: 自己紹介・経歴1段落目を記入 --></p>
+              <p><!-- TODO: 自己紹介・経歴2段落目（任意）を記入 --></p>
+            </div>
+
+            <dl class="profile-meta">
+              <div class="profile-meta-row">
+                <dt>所在地</dt>
+                <dd><!-- TODO: 都道府県（例：東京都）--></dd>
+              </div>
+              <div class="profile-meta-row">
+                <dt>資格</dt>
+                <dd><!-- TODO: 保有資格（例：AWS SAA, AWS CLF）--></dd>
+              </div>
+              <div class="profile-meta-row">
+                <dt>GitHub</dt>
+                <dd><a href="<!-- TODO: GitHub URL -->" target="_blank" rel="noopener"><!-- TODO: GitHubユーザー名 --></a></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; 2025 <!-- TODO: あなたの名前 -->. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="<!-- TODO: GitHub URL -->" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- プロジェクト詳細モーダル（左：テキスト / 右：スライドショー） -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal">
+
+      <!-- 左パネル：説明テキスト（×ボタンもここ） -->
+      <div class="modal-left">
+        <button class="modal-close" aria-label="モーダルを閉じる">&times;</button>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-tech" id="modalTech"></p>
+        <p class="modal-desc" id="modalDesc"></p>
+        <a href="" class="btn btn-primary modal-github" id="modalGithub" target="_blank" rel="noopener">GitHubで見る</a>
+      </div>
+
+      <!-- 右パネル：スライドショー -->
+      <div class="modal-right">
+        <!-- 画像エリア：重なるものは一切なし -->
+        <div class="slideshow-area" id="slideshowArea">
+          <div class="slideshow-img" id="slideshowImg" role="img" aria-label=""></div>
+          <div class="slideshow-placeholder" aria-hidden="true"></div>
+        </div>
+        <!-- ナビゲーションバー（画像の外・下） -->
+        <div class="slideshow-nav" id="slideshowNav">
+          <button class="slide-btn" id="slidePrev" aria-label="前の画像">&#8249;</button>
+          <span class="slideshow-counter" id="slideCounter"></span>
+          <button class="slide-btn" id="slideNext" aria-label="次の画像">&#8250;</button>
+        </div>
+        <!-- サムネイル帯 -->
+        <div class="slideshow-thumbs" id="slideshowThumbs"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ===== ハンバーガーメニュー =====
+    const hamburger = document.querySelector('.nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!expanded));
+      navLinks.classList.toggle('is-open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ===== スライドショー状態 =====
+    let slideImages = [];
+    let slideIndex = 0;
+
+    const PLACEHOLDER_BG = 'data:image/svg+xml,' + encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300">' +
+      '<rect width="400" height="300" fill="#dce8f7"/>' +
+      '<text x="200" y="155" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#667">画像準備中</text>' +
+      '</svg>'
+    );
+
+    function probeImages(srcs) {
+      return Promise.all(srcs.map(src =>
+        new Promise(resolve => {
+          const p = new Image();
+          p.onload  = () => resolve(src);
+          p.onerror = () => resolve(PLACEHOLDER_BG);
+          p.src = src;
+        })
+      ));
+    }
+
+    function setBg(el, src) {
+      el.style.backgroundImage = `url('${src.replace(/'/g, "\\'")}')`;
+    }
+
+    function buildSlideshow(images, title) {
+      const img      = document.getElementById('slideshowImg');
+      const thumbsEl = document.getElementById('slideshowThumbs');
+      const counter  = document.getElementById('slideCounter');
+      const navEl    = document.getElementById('slideshowNav');
+
+      img.setAttribute('aria-label', title);
+      thumbsEl.innerHTML = '';
+      navEl.hidden    = true;
+      thumbsEl.hidden = true;
+      counter.textContent = '';
+
+      probeImages(images).then(resolved => {
+        slideImages = resolved;
+        slideIndex  = 0;
+        const multi = resolved.length > 1;
+
+        resolved.forEach((src, i) => {
+          const thumb = document.createElement('button');
+          thumb.className = 'slideshow-thumb' + (i === 0 ? ' active' : '');
+          thumb.setAttribute('aria-label', `スライド ${i + 1}`);
+          thumb.addEventListener('click', () => goToSlide(i));
+          const tDiv = document.createElement('div');
+          tDiv.className = 'thumb-bg';
+          setBg(tDiv, src);
+          thumb.appendChild(tDiv);
+          thumbsEl.appendChild(thumb);
+        });
+
+        navEl.hidden    = !multi;
+        thumbsEl.hidden = !multi;
+        setBg(img, resolved[0]);
+        counter.textContent = `1 / ${resolved.length}`;
+      });
+    }
+
+    function goToSlide(index) {
+      const img            = document.getElementById('slideshowImg');
+      const counter        = document.getElementById('slideCounter');
+      const thumbsContainer = document.getElementById('slideshowThumbs');
+
+      slideIndex = index;
+      setBg(img, slideImages[index]);
+
+      document.querySelectorAll('.slideshow-thumb').forEach((t, i) => {
+        t.classList.toggle('active', i === index);
+      });
+      counter.textContent = `${index + 1} / ${slideImages.length}`;
+    }
+
+    function prevSlide() { goToSlide((slideIndex - 1 + slideImages.length) % slideImages.length); }
+    function nextSlide() { goToSlide((slideIndex + 1) % slideImages.length); }
+
+    document.getElementById('slidePrev').addEventListener('click', prevSlide);
+    document.getElementById('slideNext').addEventListener('click', nextSlide);
+
+    // スワイプ対応
+    let touchStartX = 0;
+    document.getElementById('slideshowArea').addEventListener('touchstart', e => {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    document.getElementById('slideshowArea').addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) { dx < 0 ? nextSlide() : prevSlide(); }
+    });
+
+    // ===== モーダル開閉 =====
+    const modal = document.getElementById('projectModal');
+
+    function openModal(card) {
+      const title  = card.dataset.title;
+      const tech   = card.dataset.tech;
+      const desc   = (card.dataset.description || '')
+        .replace(/<!--\s*TODO:[^>]*-->/g, '（説明はTODO）');
+      const github = (card.dataset.github || '')
+        .replace(/<!--\s*TODO:[^>]*-->/g, '');
+      const rawImages = (card.dataset.images || card.dataset.image || '');
+      const images = rawImages.split(',').map(s => s.trim()).filter(Boolean);
+      if (images.length === 0) images.push('');
+
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalTech').textContent = '使用技術：' + tech;
+      document.getElementById('modalDesc').textContent = desc;
+
+      const githubEl = document.getElementById('modalGithub');
+      if (github && !github.includes('TODO')) {
+        githubEl.href = github;
+        githubEl.hidden = false;
+      } else {
+        githubEl.hidden = true;
+      }
+
+      buildSlideshow(images, title);
+
+      modal.hidden = false;
+      document.body.classList.add('modal-open');
+      modal.querySelector('.modal-close').focus();
+    }
+
+    function closeModal() {
+      modal.hidden = true;
+      document.body.classList.remove('modal-open');
+    }
+
+    document.querySelectorAll('.card-detail-btn').forEach(btn => {
+      btn.addEventListener('click', e => { e.stopPropagation(); openModal(btn.closest('.project-card')); });
+    });
+
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.setAttribute('tabindex', '0');
+      card.addEventListener('click', e => {
+        if (!e.target.closest('.card-detail-btn')) openModal(card);
+      });
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card); }
+      });
+    });
+
+    document.querySelector('.modal-close').addEventListener('click', closeModal);
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', e => {
+      if (modal.hidden) return;
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowLeft'  && slideImages.length > 1) prevSlide();
+      if (e.key === 'ArrowRight' && slideImages.length > 1) nextSlide();
+    });
+
+    // ===== ヘッダースクロール =====
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+  </script>
+</body>
+</html>
