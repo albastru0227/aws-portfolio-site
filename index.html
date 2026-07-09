@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><!-- TODO: あなたの名前 --> | AWSクラウドエンジニア ポートフォリオ</title>
+  <title>SAITO's Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
@@ -408,9 +408,9 @@
       const title  = card.dataset.title;
       const tech   = card.dataset.tech;
       const desc   = (card.dataset.description || '')
-        .replace(/<!--\s*TODO:[^>]*-->/g, '（説明はTODO）');
+        .replace(/<!\x2d\x2d\s*TODO:[^>]*\x2d\x2d>/g, '（説明はTODO）');
       const github = (card.dataset.github || '')
-        .replace(/<!--\s*TODO:[^>]*-->/g, '');
+        .replace(/<!\x2d\x2d\s*TODO:[^>]*\x2d\x2d>/g, '');
       const rawImages = (card.dataset.images || card.dataset.image || '');
       const images = rawImages.split(',').map(s => s.trim()).filter(Boolean);
       if (images.length === 0) images.push('');
